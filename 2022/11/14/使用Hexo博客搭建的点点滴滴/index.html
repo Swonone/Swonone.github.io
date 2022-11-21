@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>
+        
+            使用Hexo博客搭建的点点滴滴
+        
+    </title>
+    <link rel="shortcut icon" href="#"/>
+
+    <link type="text/css" rel="stylesheet" href="/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSerifSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="/font/Roboto.css">
+    <link type="text/css" rel="stylesheet" href="/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/code.css">
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <a id="cover"></a>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
+<div id="header" class="header">
+    <div class="vertical">
+        <div class="inner">
+            
+                <h1 class="header-subtitle">使用Hexo博客搭建的点点滴滴</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2022-11-14
+                        </span>
+                        
+                            <span id="/2022/11/14/使用Hexo博客搭建的点点滴滴/" class="leancloud_visitors" data-flag-title="使用Hexo博客搭建的点点滴滴">
+                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        
+                        <span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/11/14/使用Hexo博客搭建的点点滴滴/"></span>
+                        </span>  
+                    </p>
+                    
+                        
+                            <span class="category-color">Hexo</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">Hexo</span>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id="container">
+    
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习前端有一段时间了，我一直都想搭建一个属于自己的博客，在经历了总体两天的时间，期间遇到了许多的问题，最后终于搞定了属于自己的博客。也是想将自己的遇到问题的解决方法分享出来，以便后续想搭建博客的朋友少踩一些坑。</p>
+<blockquote>
+<p>因为是使用mac电脑搭建的博客，部分会跟Windows会有不同望理解</p>
+</blockquote>
+<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><ol>
+<li>搭建博客的原因</li>
+</ol>
+<ul>
+<li>学习前端期间有使用过印象笔记，有道笔记等工具记录笔记，但用起来总感觉作出的效果不是很好就有了搭建博客的想法</li>
+<li>可以DIV博客的内容、外观功能等</li>
+<li>希望更多的人看到自己的文章</li>
+</ul>
+<ol start="2">
+<li>整个过程使用的时间</li>
+</ol>
+<ul>
+<li>刚开始百度参考了各路大神的文章，每篇文章问题的缺陷不同，自己又踩了许多坑才完成</li>
+<li>用了大概两天的时间，完成了博客的搭建和主题的修改</li>
+</ul>
+<ol start="3">
+<li>环境配置</li>
+</ol>
+<ul>
+<li>mac系统</li>
+<li>github账号，hexo框架配置</li>
+</ul>
+<ol start="4">
+<li>搭建方式</li>
+</ol>
+<ul>
+<li>使用hexo框架进行网站的构建，之后部署到免费的GitHub上</li>
+</ul>
+<h2 id="二、GitHub配置"><a href="#二、GitHub配置" class="headerlink" title="二、GitHub配置"></a>二、GitHub配置</h2><ol>
+<li><p>登陆github&#x2F;，没有账号可以注册一个（之后需要用到，记住用户名）</p>
+</li>
+<li><p>主页中点击右上角自己的图标，点击Your profile</p>
+</li>
+</ol>
+<p>![your profile](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;your profile.png)</p>
+<ol start="3">
+<li>点击New repository，新建一个</li>
+</ol>
+<p>![New repository](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;New repository.png)</p>
+<ol start="4">
+<li>Repository name(填写自己的名字，推荐都用小写，刚开始创建的时候用的首字母大写，期间用大写访问时，就是进不去，后续就直接删除了重新创建了全是小写，就可以正常运行)  yourname.github.io(yourname与你的注册用户名一致,这个就是你博客的域名了),下图中报错是因为我已经用过了这个名字，大家填写自己的名字不会遇到这个问题，然后点击createrepository进行下一步</li>
+</ol>
+<p>![截屏2022-11-14 22.01.22](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-14 22.01.22.png)</p>
+<ol start="5">
+<li>点击自己的这个repository，然后找到settings</li>
+</ol>
+<p>![截屏2022-11-14 22.06.37](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-14 22.06.37.png)</p>
+<ol start="6">
+<li>下拉找到Pages, 其中上面红框中的即为你的博客地址，在另张图中下面红色框中可以进去选择自己的主题样式, 此时github中的基本配置已经完成</li>
+</ol>
+<p>![截屏2022-11-14 22.11.07](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-14 22.11.07.png)</p>
+<p>这张图中点击这个<a target="_blank" rel="noopener" href="https://www.likecs.com/show-204199676.html">静态站点生成器</a>在里面点击选择</p>
+<p>![截屏2022-11-14 22.13.43](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-14 22.13.43.png)</p>
+<p>![截屏2022-11-14 22.20.06](&#x2F;Users&#x2F;jack&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;截屏2022-11-14 22.20.06.png)</p>
+<h2 id="三、环境的搭配"><a href="#三、环境的搭配" class="headerlink" title="三、环境的搭配"></a>三、环境的搭配</h2><ol>
+<li><p>安装 <a href="https://link.juejin.cn/?target=http://nodejs.cn/download/">Node.js</a><br>安装完成后终端输入</p>
+<p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+<p>查看版本号，如存在则表明配置成功</p>
+</li>
+<li><p>mac系统：下载Xcode会自带Git环境，Windows用户需要自行下载<a href="https://link.juejin.cn/?target=https://github.com/waylau/git-for-win">Git</a></p>
+</li>
+<li><p>安装完成后，通过git命令查看自己的用户名和邮箱是否和自己github中的一致，如不一致请自行更改，如查询到多个用户名须删除没用的用户名，如查询后没有任何反应则表明还没有配置用户名，用下面的修改或者添加用户名命令即可，如提示其他之类的可先执行命令 <code>git config</code>，然后再执行以下命令即可成功,附查看和更改命令（其他命令可自行百度查找）：</p>
+<p><strong>查看用户名：</strong>  <code>git config --global user.name</code></p>
+<p><strong>查看邮箱：</strong>  <code>git config --global user.email</code></p>
+<p><strong>删除用户名</strong> <code>git config --global --unset user.name 要删的用户名</code></p>
+<p><strong>增加用户名</strong> <code>git config —global —add user.name 新加的用户名</code></p>
+<p><strong>修改用户名</strong> <code>git config --global user.name 用户名</code></p>
+<p><strong>修改邮箱</strong> <code>git config --global user.email 邮箱</code></p>
+</li>
+<li><p>终端中输入 <code>npm install -g hexo-cli</code>(如提示无权限即下图红色框中permission denied，则输入<code>sudo npm install -g hexo-cli</code>,后输入电脑密码enter即可)</p>
+</li>
+</ol>
+<p><img src="/Users/jack/Desktop/7a829309d39d48f285421320ec322d60_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0.png" alt="7a829309d39d48f285421320ec322d60_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0"></p>
+<p>​		这个过程会比较久，如果出现WARN错误可以忽略。我记得当时，每次都会出现说有   		一个依赖包已经不更新，这个不影响。执行完成后，使用 <code>hexo -v</code> 查看是否安装成		功，如下图所示，即表明已经成功安装上</p>
+<p><img src="/Users/jack/Desktop/4ad46072bf1945d09c6172c0a46b766e_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0.png" alt="4ad46072bf1945d09c6172c0a46b766e_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0"></p>
+<h2 id="四、网站代码以及设置"><a href="#四、网站代码以及设置" class="headerlink" title="四、网站代码以及设置"></a>四、网站代码以及设置</h2><ol>
+<li>在桌面创建一个文件夹，名字自定义如：hexo，终端cd进入hexo文件夹</li>
+<li>输入hexo init blog（如出现warn错误可忽略，不影响）</li>
+</ol>
+<ul>
+<li>_config.yml, 网站的配置信息，可以在此配置中配置大部分的参数</li>
+<li>source，资源文件夹是存放用户资源的地方。除 posts 文件夹之外，开头命名为 (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去</li>
+<li>themes，主题 文件夹。Hexo 会根据主题来生成静态页面。</li>
+</ul>
+<ol start="3">
+<li>等待提示Start blogging with Hexo，就是安装成功了</li>
+<li>文件夹中自带一篇文章“Hello World”</li>
+<li>命令行cd进入blog目录下</li>
+<li>输入hexo g，生存静态文件</li>
+<li>输入hexo s，启动服务器。默认情况下，访问网址为：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 此时服务器开启，如需关闭Ctrl+C</li>
+</ol>
+<blockquote>
+<p>注：hexo s 命令开启的是本地服务，开启后，则可以使用上述地址访问，如关闭，则上述地址访问不到，本功能旨在用来检查修改的配置是否成功，如打开查看后发现没有问题则可以部署到服务器上，之后再用你的博客地址访问即可看到最新的设置效果。</p>
+</blockquote>
+<blockquote>
+<p>如上传服务器之后立即查看博客可能没有立即变化，可尝试多刷新几次或重新打开浏览器即可</p>
+</blockquote>
+<ol start="8">
+<li>新打开一个终端，输入：ssh-keygen -t rsa -C “Github的注册邮箱地址”</li>
+</ol>
+<p>一路来enter过来，中间有的问题是选y&#x2F;n的，选y即可，最后得到信息中找到这句话：</p>
+<blockquote>
+<p>Your public key has been saved in &#x2F;Users&#x2F;zjjk&#x2F;.ssh&#x2F;id_rsa.pub.</p>
+</blockquote>
+<p>找到该文件（上句中in后边几位该文件的地址,打开（使用sublime text或其他编辑器），Ctrl + a复制里面所有内容，然后进入Sign in to GitHub：<a href="https://link.juejin.cn/?target=https://github.com/settings/keys">github.com&#x2F;settings&#x2F;ss…</a></p>
+<p>一步步操作：New SSH key ——Title：blog —— Key：输入刚才复制的—— Add SSH key</p>
+<blockquote>
+<p>注：此过程是生成ssh key，如后续再次执行此命令时，则需要把新生成的SSH key再配置到github中，因为新生成的SSH key会覆盖之前的，如不去github中替换会导致后续上传git服务器过程中失败</p>
+</blockquote>
+<h2 id="五、博客网站配置信息"><a href="#五、博客网站配置信息" class="headerlink" title="五、博客网站配置信息"></a>五、博客网站配置信息</h2><ol>
+<li>进入blog文件夹，用sublime打开_config.yml文件，此文件为博客的配置信息，在此修改参数。（<strong>特别注意：每个参数的后面都要加个空格</strong>）</li>
+<li>按照自己的信息进行基础设置</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 小喵的博客</span><br><span class="line">subtitle: 小白的技术成长之路</span><br><span class="line">description: 小白的技术成长之路</span><br><span class="line">author: 小喵</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>在_config.yml文件中找到 <code>deploy</code>配置处（一般在最下面，默认的显示可能不全，需按照下方示例自己添加）, username替换成你自己的username, repository的地址为你在github中创建的那个项目的地址，可去github中复制</p>
+<p>![截屏2022-11-14 23.00.01](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-14 23.00.01.png)</p>
+</li>
+</ol>
+<ul>
+<li><blockquote>
+<p>deploy: </p>
+<p> type: git</p>
+<p>repository: <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:swonone&#x2F;swonone.github.io.git</p>
+<p> branch: master</p>
+</blockquote>
+</li>
+</ul>
+<p>​		保存完毕。</p>
+<ul>
+<li>各类主题的配置信息，要在主题文件夹内的_config.yml上进行配置！后续会以next主题为例进行示范，此处可忽略。</li>
+</ul>
+<h2 id="六、发表文章"><a href="#六、发表文章" class="headerlink" title="六、发表文章"></a>六、发表文章</h2><ol>
+<li><p>终端 <code>cd</code> 进入blog文件夹下，输入<code>hexo new &quot;Hello blog&quot;</code>(Hello blog为你的文章名，可自定义)</p>
+</li>
+<li><p>打开返回的文件地址，打开文件（也可在blog文件夹下 source&#x2F;_posts&#x2F;Hello blog.md 中找到你刚才创建的文件）</p>
+</li>
+<li><p>文章内容采用Markdown语法进行编辑，需要用相关软件才能打开这个文件，本人使用的软件为<a href="https://link.juejin.cn/?target=http://macdown.uranusjr.com/">MacDown mac版</a>, 大家可根据自己习惯下载喜欢的工具(<strong>附：<a href="https://link.juejin.cn/?target=http://note.youdao.com/iyoudao/?p=2411&vendor=unsilent14">Markdown语法使用说明</a></strong>)</p>
+</li>
+<li><p>打开文件编辑：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello blog</span><br><span class="line">date: </span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>只输入title字段即可，后续其他字段可根据主题再添加（<strong>注意：title后面需加空格</strong>）</p>
+</li>
+<li><p>打开终端执行以下步骤：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cd 进入blog 文件夹</span><br><span class="line"></span><br><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line"></span><br><span class="line">$ hexo generate</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.48 s</span><br><span class="line">...</span><br><span class="line">INFO  29 files generated in 4.27 s</span><br><span class="line"></span><br><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p>此处散步时进行本地配置完成后，在本地打开查看刚刚修改的配置是否修改成功，三处命令也可以这样写 hexo clean	hexo g	hexo s</p>
+</li>
+<li><p>打开 <a href="https://link.juejin.cn/?target=http://localhost:4000/">http://localhost:4000/</a>后检查，如没有任何问题可以部署到服务器上</p>
+<p>&#96;&#96;&#96;<br>$ hexo deploy<br>INFO Deploy: git</p>
+</li>
+</ol>
+<p>​		此时可能会出现 <code>error deployer not found:git</code> 的错误，输入以下代码</p>
+<p>​		<code>npm install hexo-deployer-git --save</code>(如提示无权限错误则输入<code>sudo npm 					   	 install hexo-deployer-git –-save</code>，后输入电脑密码enter即可)</p>
+<p>​		再次执行 <code>hexo deploy</code></p>
+<p>​		其中，可能会出现github登录界面，正常填写就行(这里我一直登陆着github，暂时没有遇到)</p>
+<p>​		完成，终端可Ctrl+C关闭本地服务，然后打开 username.github.io 即可访问自己的博客（username为自己的github的用户名）</p>
+<h2 id="七、主题设置"><a href="#七、主题设置" class="headerlink" title="七、主题设置"></a>七、主题设置</h2><p>主题设置，最眼花缭乱的地方，有各种各样的主题，可以进行很多的挑选，这次主要是用在<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">官方hexo主题大全</a>，里面有许多主题都能尝试一下。</p>
+<p>在这里推荐几个主题：</p>
+<ul>
+<li><p><a href="https://link.juejin.cn/?target=http://theme-next.iissnan.com/getting-started.html">next官网,Git</a>(我用的就是这个啦，十分推荐！）</p>
+</li>
+<li><p><a href="https://link.juejin.cn/?target=https://mt.viosey.com/">Material官网，Git</a></p>
+<ol>
+<li><p>主题配置，在官网找到对应的主题首先要下载主题，到相应的Git链接</p>
+</li>
+<li><p>下载完以后将文件解压缩后放到blog中的themes文件夹中</p>
+<p>![截屏2022-11-15 00.00.49](&#x2F;Users&#x2F;jack&#x2F;Desktop&#x2F;截屏2022-11-15 00.00.49.png)</p>
+</li>
+<li><p>修改主题文件夹名称，将其改为 next(名称为你的主题的名称，可自定义，无硬性要求，下以next为例) 。 然后打开配置文件（&#x2F;blog&#x2F;_config.yml），找到 theme 字段，并将其值更改为 next(你刚才自定义的名称, 注意theme后加空格)，保存关闭</p>
+<p><img src="/Users/jack/Desktop/16967cf3f4ae4aaa835a79af8ef0e571_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0.png" alt="16967cf3f4ae4aaa835a79af8ef0e571_tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0"></p>
+<pre><code> 4.  接下来，打开主题相应的博客中的文档说明，对比“主题”中的_config.yml（ /blog/themes/next/_config.yml ），针对自己需要的功能进行相关设置
+</code></pre>
+</li>
+<li><p>有关设置中的图片，统一放到主题文件夹(&#x2F;next&#x2F;)内\source\img。在设置中，用”&#x2F;img&#x2F;xigua.png”类似格式进行图片设置。</p>
+</li>
+<li><p>设置时切记 : 后面要加一个空格。这个坑有点恼人~</p>
+</li>
+<li><p>最后再重新进行一次，hexo clean,hexo g,hexo s,hexo deploy 整个博客就完成主题修改啦</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="八、总结"><a href="#八、总结" class="headerlink" title="八、总结"></a>八、总结</h2><ul>
+<li>用了两天时间搭建了博客和写了这篇文章，写到这里真的不容易，搭建过程中遇到了很多问题，各种百度搜索，问题比较杂乱，故写此文将遇到的坑写出来，大家以后遇到查到了这篇文章，可以很快处理这些问题就感到超值。</li>
+<li>[小喵的博客]（）</li>
+</ul>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="小喵的个人博客">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>小喵的个人博客
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2022/11/14/%E4%BD%BF%E7%94%A8Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%82%B9%E7%82%B9%E6%BB%B4%E6%BB%B4/" target="_blank">使用Hexo博客搭建的点点滴滴</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">关于主题：</span><a href="https://github.com/swonone/swonone.github.io" target="_blank">swonone.github.io</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/categories/Hexo/">Hexo</a>
+                        
+                    </div>
+                
+                
+                    <div class="tag">
+                        标签：
+                        
+                            <a href="/tags/Hexo/">Hexo</a>
+                        
+                    </div>
+                
+                <div class="article-prev-next">
+                    
+                    
+                        <a href="/2020/08/01/Hexo%E4%B8%BB%E9%A2%98LiveForCode%E4%BB%8B%E7%BB%8D/" class="next-prefix">» </a> 下一篇：    <a href="/2020/08/01/Hexo%E4%B8%BB%E9%A2%98LiveForCode%E4%BB%8B%E7%BB%8D/" title="发布于 2020-08-01 12:00">Hexo主题LiveForCode介绍</a>
+                    
+                </div>
+            </div>
+            
+    <div class="article-comments">
+        
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+
+        </div>
+    
+</div>
+    <div id="footer"></div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span>简单地活着，肆意而又精彩！</span>
+                </div>
+            </div>
+        
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar">
+                    <img src="/image/sidebar/avatar.jpg">
+                </div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user"><span>小喵的个人博客</span></div>
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul>
+                    
+                        <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
+                    
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                    
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                    
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                    
+                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
+                    
+                        <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
+                    
+                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
+                    
+                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
+                    
+                        <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
+                    
+                        <li class=""><a href="/friend" class="" target="_self"><span class="iconfont icon-link"></span>友情链接</a></li>
+                    
+                </ul> 
+            </div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                
+                    <a name="知乎" href="https://www.zhihu.com/people/54-45-75-59-13" class="" target="_blank" data=""><span class="iconfont icon-zhihu"></span></a>
+                
+                    <a name="微博" href="" class="" target="_blank" data=""><span class="iconfont icon-weibo"></span></a>
+                
+                    <a name="QQ" href="javascript:;" class="image" target="_self" data="/image/sidebar/qq.png"><span class="iconfont icon-qq"></span></a>
+                
+                    <a name="微信" href="javascript:;" class="" target="_self" data=""><span class="iconfont icon-wechat"></span></a>
+                
+                    <a name="GitHub" href="https://github.com/first19326" class="" target="_blank" data=""><span class="iconfont icon-github"></span></a>
+                
+            </div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/search.css">
+<script type="text/javascript" src="/js/iscroll.js"></script>
+<script type="text/javascript" src="/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+
+    
+        <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
+        <script type="text/javascript" src="/js/APlayer.min.js"></script>
+        <script type="text/javascript" src="/js/Meting.min.js"></script>
+        <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+    
+    
+    <div class="wrap-right">
+        <div class="setting">
+            <div class="iconbox favorites" switch="false">
+                <span class="iconfont icon-favorites"></span>
+                <span class="icontext">关注</span>
+            </div>
+            <div class="iconbox mode">
+                <div class="light">
+                    <span class="iconfont icon-daymode"></span>
+                    <span class="icontext">浅色模式</span>
+                </div>
+                <div class="dark">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                    <span class="icontext">深色模式</span>
+                </div>
+            </div>
+            <a href="javascript:;" target="_self" class="search">
+                <div class="iconbox">
+                    <span class="iconfont icon-search-menu"></span>
+                    <span class="icontext">搜索</span>
+                </div>
+            </a>
+            <div class="iconbox bottom">
+                <div style="display: inline-block; transform: rotate(180deg);">
+                    <span class="iconfont icon-top"></span>
+                </div>
+                <span class="icontext">跳至底部</span>
+            </div>
+        </div>
+        <div class="iconbox set">
+            <div style="display: inline-block;">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="iconbox top">
+            <span class="iconfont icon-top"></span>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : "swonone",
+        GitHubRepositories : "swonone.github.io",
+
+        User             : "小喵的个人博客",
+        UserAvatar       : "/image/sidebar/avatar.jpg",
+        WebsiteStartDate : "2022-11-11",
+
+        WebsiteTitleBlur         : "(◍´꒳`◍) Hi, 小喵",
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : "(*´∇｀*) 欢迎回来!",
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : "/image/website/logo.png",
+
+        ProgressBar : {
+            id       : "topProgressBar",
+            color    : "#77B6FF",
+            height   : "2px",
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound : {
+                tension  : 16,
+                friction : 5
+            },
+            spinner : {
+                id     : "spinner",
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : "#F0F0F0",
+                    stroke     : "#272633",
+                    base       : "",
+                    child      : "#272633"
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : "rgba(255, 255, 255, .2)",
+            clearOffset : 0.3
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : "60%",
+            colorBrightness  : "50%",
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : "random",
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                "/image/header/home.jpg",
+            
+                "/image/header/home.jpeg",
+            
+        ],
+        HomeBannerText  : "",
+
+        ArticleHeaderImage : [
+            
+                "/image/header/article.jpg",
+            
+        ],
+
+        OtherBannerText : "",
+
+        Error : {
+            icon    : "icon-swimming",
+            title   : "PAGE NOT FOUND",
+            content : [
+                
+                    "很抱歉，您访问的页面不存在！",
+                
+                    "可能是输入地址有误或该地址已变更。",
+                
+            ],
+            buttons : [
+                
+                    {
+                        icon  : "icon-home",
+                        text  : "返回首页",
+                        href  : "/",
+                        class : ""
+                    },
+                
+            ]
+        },
+
+        MenuNotice : {
+            enable : true,
+            notice : "简单地活着，肆意而又精彩！",
+            speed  : 20
+        },
+        MenuList : [
+            
+                {
+                    name   : "首页",
+                    icon   : "icon-home-fill",
+                    href   : "/",
+                    type   : "index",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "分类",
+                    icon   : "icon-folder-fill",
+                    href   : "/category",
+                    type   : "category",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "标签",
+                    icon   : "icon-discount-fill",
+                    href   : "/tag",
+                    type   : "tag",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "归档",
+                    icon   : "icon-calendar-fill",
+                    href   : "/archive",
+                    type   : "archive",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "赞赏",
+                    icon   : "icon-heart-fill",
+                    href   : "/donate",
+                    type   : "donate",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "关于",
+                    icon   : "icon-about-fill",
+                    href   : "/about",
+                    type   : "about",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "订阅",
+                    icon   : "icon-rss",
+                    href   : "/atom.xml",
+                    type   : "",
+                    class  : "",
+                    target : "_blank"
+                },
+            
+                {
+                    name   : "搜索",
+                    icon   : "icon-search-menu",
+                    href   : "javascript:;",
+                    type   : "",
+                    class  : "search",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "留言板",
+                    icon   : "icon-comments-fill",
+                    href   : "/comment",
+                    type   : "comment",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "友情链接",
+                    icon   : "icon-link",
+                    href   : "/friend",
+                    type   : "friend",
+                    class  : "",
+                    target : "_self"
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        name   : "知乎",
+                        icon   : "icon-zhihu",
+                        href   : "https://www.zhihu.com/people/54-45-75-59-13",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "微博",
+                        icon   : "icon-weibo",
+                        href   : "",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "QQ",
+                        icon   : "icon-qq",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/qq.png"
+                    },
+                
+                    {
+                        name   : "微信",
+                        icon   : "icon-wechat",
+                        href   : "javascript:;",
+                        class  : "",
+                        target : "_self",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "GitHub",
+                        icon   : "icon-github",
+                        href   : "https://github.com/first19326",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2022 WorstOne. All Rights Reserved.</div>",
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                "Based on cnblogs theme SimpleMemory.",
+                            
+                                "",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "SimpleMemory Author:",
+                            
+                                "BNDong",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "Theme:",
+                            
+                                "LiveForCode",
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : "",
+
+        Donate : {
+            paypal  : "",
+            bitcoin : "",
+            alipay  : "/image/donate/alipay.png",
+            wechat  : "/image/donate/wechat.png"
+        },
+
+        Search : {
+            applicationID : "010C3EANT8",
+            apiKey        : "c7abab9f11b79102b9aff7fe6d41447d",
+            indexName     : "Notes",
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : "搜索",
+                empty       : "未发现与 「${query}」 相关的内容",
+                stats       : "${hits} 条相关条目，使用了 ${time} 毫秒",
+            }
+        }, 
+
+        Valine : {
+            switch         : true,
+            el             : ".comments-content",
+            appId          : "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz",
+            appKey         : "8uVSP1q6UlALVC5igYfIfv2h",
+            serverURLs     : "",
+            placeholder    : "你是我一生只会遇见一次的惊喜...",
+            avatar         : "mm",
+            meta           : "nick,mail,link",
+            requiredFields : "nick,mail",
+            pageSize       : 5,
+            lang           : "zh-cn",
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : ".toc",
+            contentSelector       : ".article-body",
+            headingSelector       : "h1, h2, h3, h4, h5",
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : ".toc",
+            positionFixedClass    : "toc-fixed",
+            fixedSidebarOffset    : "",
+        },
+
+        Require : {
+            baseUrl     : "/js/",
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : "Meting"
+        },
+        APlayer : {
+            container : ".aplayer",
+            fixed     : true,
+            autoplay  : false,
+            loop      : "all",
+            order     : "random",
+            preload   : "auto",
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : "Endless Tears",
+                        artist : "CLIFF EDGE",
+                        cover  : "/music/cover/Endless Tears.jpg",
+                        url    : "/music/song/Endless Tears.mp3",
+                        lrc    : "/music/lrc/Endless Tears.lrc"
+                    },
+                
+            ]
+        },
+        Meting : {
+            id       : "3778678", 
+            lrcshow  : false, 
+            server   : "netease", 
+            type     : "playlist", 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : "all", 
+            order    : "random", 
+            preload  : "auto", 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        Mouse : {
+            enable  : true,
+            options : {
+                size  : 6,
+                sizeF : 24
+            }
+        },
+
+        LazyLoad : {
+            default : "/image/website/lazyload.svg"
+        },
+  
+        Style : {
+            aplayer          : "/css/APlayer.css",
+            archive          : "/css/archive.css",
+            base             : "/css/base.css",
+            clipboard        : "/css/clipboard.css",
+            code             : "/css/code.css",
+            donate           : "/css/donate.css",
+            fancybox         : "/css/jquery.fancybox.css",
+            footer           : "/css/footer.css",
+            iconfont         : "/iconfont/iconfont.css",
+            index            : "/css/index.css",
+            menuBubble       : "/css/menu-bubble.css",
+            mouse            : "/css/mouse.css",
+            page             : "/css/page.css",
+            post             : "/css/post.css",
+            search           : "/css/search.css",
+            tocbot           : "/css/tocbot.css",
+            valine           : "/css/valine.css"
+        },
+
+        Script: {
+            aplayer          : "/js/APlayer.min.js",
+            config           : "/js/require.config.js",
+            index            : "/js/index.js",
+            instantSearch    : "/js/instantsearch.min.js",
+            iscroll          : "/js/iscroll.js",
+            jQuery           : "/js/jquery-3.4.1.min.js",
+            loading          : "/js/loading.js",
+            meting           : "/js/Meting.min.js",
+            require          : "/js/require.min.js"
+        },
+
+        Font: {
+            LongCang    : "/font/LongCang.css",
+            Monda       : "/font/Monda.css",
+            NotoSansSC  : "/font/NotoSansSC.css",
+            NotoSerifSC : "/font/NotoSerifSC.css",
+            Playball    : "/font/Playball.css",
+            PTMono      : "/font/PTMono.css",
+            Roboto      : "/font/Roboto.css",
+            RobotoSlab  : "/font/RobotoSlab.css",
+            Rosario     : "/font/Rosario.css",
+            UbuntuMono  : "/font/UbuntuMono.css"
+        },
+
+        Suffix : {
+            about : "简单地活着, 肆意又精彩."
+        },
+            
+        Theme : {
+            url  : "https://github.com/swonone/swonone.github.io",
+            name : "swonone.github.io"
+        }  
+    };
+</script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
